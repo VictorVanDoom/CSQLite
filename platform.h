@@ -11,16 +11,18 @@
 #ifndef CSQLite_platform_h
 #define CSQLite_platform_h
 
-#ifdef __linux__
+    #ifdef __linux__
 
-    #import "/usr/include/sqlite3.h"
+        #import "/usr/include/sqlite3.h"
 
-#elif __APPLE__
+    #elif __APPLE__
 
-    #import "/usr/local/opt/sqlite/include/sqlite3.h"
+        #import "/usr/local/opt/sqlite/include/sqlite3.h"
 
-#else
+    #else
 
-    #error "Platform not supported for SQLite3 header generation. Use either Apple or Linux."
+        #error "Platform not supported for SQLite3 header generation. Use either Apple or Linux."
+
+    #endif
 
 #endif
