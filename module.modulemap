@@ -1,5 +1,12 @@
+/**
+ Define a module around the Wrapper header, which in turn imports the sqlite3.h for the
+ different platforms (currently only Apple and Linux).
+ 
+ Autohor: VictorVanDoom
+ */
+
 module CSQLite {
-    header "shim.h"
+    header "platform.h"
     link "sqlite3"
     export *
 }
